@@ -1,0 +1,77 @@
+@import "./_mixins";
+@import "./_variables";
+
+.add-contact {
+  display: flex;
+  align-items: center;
+  padding: $basic-padding;
+
+  border-radius: $border-radius;
+
+  font-size: $basic-font-size;
+  background: $main-color;
+  color: $secondary-color;
+
+  @include contact-item-size;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 20px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  
+    background-color: $tertiary-color;
+    color: white;
+
+    font-size: $big-font-size;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color $basic-transition-time ease,
+      transform $basic-transition-time ease;
+
+    @include initials-size;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+     background-color: $add-contact-btn-hover-color;
+    }
+
+    &:active {
+      @include basic-scale;
+    }
+  }
+  
+  &__form {
+    display: flex;
+    align-items: center;
+
+    &--active {
+      justify-content: space-between;
+    }
+  }
+
+  &__input {
+    margin-right: 20px;
+    width: 190px;
+    height: 50px;
+    border-radius: 5px;
+
+    background-color: $input-color;
+    color: $secondary-color;
+  
+    font-family: inherit;
+    font-size: $basic-font-size;
+
+    cursor: pointer;
+    border: none;
+    outline: none;
+  }
+}

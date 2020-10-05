@@ -1,0 +1,69 @@
+@import "./_mixins";
+@import "./_variables";
+
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $basic-padding;
+
+  border-radius: $border-radius;
+  font-size: $basic-font-size;
+  background-color: $main-color;
+  color: $secondary-color;
+
+  cursor: pointer;
+  transition: background-color $long-transition-time ease;
+
+  @include  contact-item-size;
+
+  &:hover {
+    background-color: $quaternary-color;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &__initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-right: 20px;
+  
+    border-radius: 50%;
+    background-color: $tertiary-color;
+
+    @include initials-size;
+  }
+
+  &__delete-button {
+    height: 45px;
+    width: 45px;
+
+    border-radius: 50%;
+    font-size: 20px;
+    outline: none;
+    border: none;
+
+    color: inherit;
+    background-color: $tertiary-color;
+    cursor: pointer;
+    transition: background-color $basic-transition-time ease,
+      transform $basic-transition-time ease;
+
+    &:hover {
+     background-color: $add-contact-btn-hover-color;
+    }
+
+    &:active {
+      @include basic-scale;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+@import "./_variables";
+@import "./mixins";
+
+.edit-contact {
+  width: $basic-item-width;
+  height: 100%;
+  background-color: $senary-color;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: $basic-padding;
+
+  border-radius: $border-radius;
+  font-size: $basic-font-size;
+  color: $secondary-color;
+
+  &__header {
+    background-color: $tertiary-color;
+    position: relative;
+    top: -20px;
+    left: -20px;
+    padding: $basic-padding;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 60px;
+    width: $basic-item-width;
+
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    $senary-color: #4e4e4e;
+  }
+
+  &__list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    margin-right: 10px;
+
+    padding: 5px;
+    width: 160px;
+    height: 15px;
+    border-radius: 5px;
+
+    background-color: $input-color;
+    color: $senary-color;
+  
+    cursor: pointer;
+    border: 2px solid $secondary-color;
+  
+    font-family: inherit;
+    font-size: $small-font-size;
+  }
+
+  &__button {
+    padding: 0;
+    font-size: $basic-font-size;
+    outline: none;
+    border: none;
+
+    background-color: inherit;
+    color: inherit;
+    cursor: pointer;
+    transition: $basic-transition-time;
+
+    &:hover {
+      color: $details-btn-hover-color;
+    }
+
+    &:active {
+      @include basic-scale;
+    }
+  }
+
+  &__submit-button {
+    position: absolute;
+    bottom: 30px;
+    left: calc(50% - 120px / 2);
+    height: 40px;
+    width: 120px;
+
+    border-radius: $button-border-radius;
+    font-size: $smaller-font-size;
+    outline: none;
+    border: none;
+
+    color: inherit;
+    background-color: $tertiary-color;
+    cursor: pointer;
+    transition: $basic-transition-time;
+
+    &:hover {
+      background-color: $details-btn-hover-color;
+    }
+
+    &:active {
+      @include basic-scale;
+    }
+  }
+}
