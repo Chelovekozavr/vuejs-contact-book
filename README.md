@@ -1,5 +1,5 @@
 # Contact book in VueJS
-[DEMO LINK](https://chelovekozavr.github.io/vue-contacts/)
+[DEMO LINK](https://chelovekozavr.github.io/vuejs-contact-book/)
 
 Stack: Javascript, VueJS, Vuex, router, SASS, BEM
 
