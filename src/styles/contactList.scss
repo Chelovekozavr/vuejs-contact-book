@@ -1,0 +1,18 @@
+@import "./mixins";
+
+.content_container {
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 10px;
+
+  @include shadow ();
+}
+
+.contacts_list {
+  display: grid;
+  grid-auto-columns: auto;
+  grid-gap: 20px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}

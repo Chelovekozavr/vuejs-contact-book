@@ -1,0 +1,74 @@
+@import "./_mixins";
+@import "./_variables";
+
+.delete_backdrop {
+  @include shadow;
+}
+
+.delete-confirmation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 200px;
+  left: calc(50% - (290px / 2));
+
+  padding: 20px;
+
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+
+  font-size: $big-font-size;
+  background-color: $secondary-color;
+  color: $senary-color;
+
+  &__text {
+    margin: 0;
+  }
+
+  &__buttons-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    margin: 10px;
+    border-radius: 50%;
+
+    color: #fff;
+    font-size: 38px;
+
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    @include initials-size;
+
+    &--ok {
+      background-color: #33ff00;
+      transition: $basic-transition-time;
+
+      &:hover {
+        background-color: #2bd600;
+      }
+
+      &:active {
+        @include basic-scale;
+      }
+    }
+
+    &--cancel {
+      background-color: #ff0000;
+      transition: $basic-transition-time;
+
+      &:hover {
+        background-color: #db0000;
+      }
+
+      &:active {
+        @include basic-scale;
+      }
+    }
+  }
+}

@@ -1,0 +1,192 @@
+@import "./_mixins";
+@import "./_variables";
+
+.contact-details {
+  width: $basic-item-width;
+  background-color: $tertiary-color;
+
+  position: fixed;
+  top: 200px;
+
+  padding: $basic-padding;
+
+  border-radius: $border-radius;
+  font-size: $basic-font-size;
+  color: $secondary-color;
+
+  &__backdrop {
+    @include shadow;
+  }
+
+  &__header {
+    position: relative;
+    top: -20px;
+    left: -20px;
+    padding: $basic-padding;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 60px;
+    width: $basic-item-width;
+
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    background-color: $senary-color;
+  }
+
+  &__header_title {
+    font-size: $bigger-font-size;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      left: 0;
+      display: block;
+
+      width: 75%;
+      content: '';
+      border-bottom: 3px solid $secondary-color;
+    }
+  }
+
+  &__header_button {
+    padding: 5px;
+    font-size: $basic-font-size;
+    outline: none;
+    border: none;
+
+    background-color: inherit;
+    color: inherit;
+    cursor: pointer;
+    transition: color $basic-transition-time ease,
+      transform $basic-transition-time ease;
+
+    &:hover {
+      color: $details-btn-hover-color;
+    }
+
+    &:active {
+      @include basic-scale;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    font-size: $small-font-size;
+  }
+
+  &__list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+
+    &:hover {
+      button {
+        opacity: 1;
+      }
+    }
+
+    button {
+      opacity: 0;
+    }
+  }
+
+  &__item-title {
+    color: $senary-color;
+    margin-right: 20px;
+  }
+
+  &__button {
+    border-radius: 50%;
+    font-size: $smaller-font-size;
+    outline: none;
+    border: none;
+
+    color: inherit;
+    background-color: $senary-color;
+    cursor: pointer;
+    transition: opacity $basic-transition-time ease,
+      background-color $basic-transition-time ease,
+      transform $basic-transition-time ease;
+
+    @include details-button-size;
+
+    &:hover {
+      background-color: $quaternary-color;
+    }
+
+    &:active {
+      @include basic-scale;
+    }
+  }
+
+  &__no-info {
+    color: $senary-color;
+    margin-bottom: 20px;
+  }
+
+  &__edit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__input {
+    margin-right: 10px;
+    padding: 5px;
+    width: 140px;
+    height: 20px;
+    border-radius: 5px;
+
+    background-color: $input-color;
+    color: $senary-color;
+  
+    cursor: pointer;
+    border: 2px solid $secondary-color;
+  
+    font-family: inherit;
+    font-size: $small-font-size;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  &__footer-button {
+    height: 40px;
+    width: 120px;
+
+    border-radius: $button-border-radius;
+    font-size: 14px;
+    outline: none;
+    border: none;
+
+    color: inherit;
+    background-color: $senary-color;
+    cursor: pointer;
+    transition: background-color $basic-transition-time ease,
+      transform $basic-transition-time ease;
+
+    &:hover {
+      background-color: $quaternary-color;
+    }
+
+    &:active {
+      @include basic-scale;
+    }
+  }
+}
